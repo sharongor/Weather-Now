@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.Alarm.DailyAlarm"
+    android:padding="10dp"
+    android:background="@drawable/morning_colors">
+
+
+        <androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="10dp"
+            android:layout_marginLeft="5dp"
+            android:id="@+id/card_home_someDetails"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginRight="5dp"
+            app:cardBackgroundColor="#33FFFFFF"
+            app:cardCornerRadius="5dp"
+            app:cardElevation="0dp"
+            app:cardUseCompatPadding="true"
+            app:contentPadding="3dp"
+            android:layout_marginBottom="15dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="@string/alarm_text_disable_1"
+                            android:textColor="#ffffff"
+                            android:textSize="20sp"
+                            android:layout_weight="1"/>
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:text="@string/alarm_text_disable_2"
+                            android:textColor="#ffffff"
+                            android:textSize="20sp"
+                            android:layout_weight="1"/>
+                </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/alarm_each_day"
+            android:textStyle="italic"
+            android:textSize="20sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:text="@string/choose_time" />
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/disable_btn"
+            android:textStyle="italic"
+            android:textSize="18sp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentStart="true"
+            android:text="@string/disable_alarm"
+            android:layout_marginTop="50dp"
+            android:visibility="gone"/>
+
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:scaleType="fitXY"
+            android:id="@+id/android_work_image"
+            android:layout_gravity="center"
+            android:layout_marginTop="50dp"/>
+
+
+</LinearLayout>

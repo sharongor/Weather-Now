@@ -1,0 +1,216 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/my_nav"
+    app:startDestination="@id/homeScreenFragment">
+    <fragment
+        android:id="@+id/homeScreenFragment"
+        android:name="il.example.weatherapp.ui.HomeScreen.HomeScreenFragment"
+        android:label="home_screen_fragment"
+        tools:layout="@layout/home_screen_fragment" >
+        <action
+            android:id="@+id/action_homeScreenFragment_to_weatherScreenFragment"
+            app:destination="@id/weatherScreenFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@id/homeScreenFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_historyFragment"
+            app:destination="@id/historyFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@id/homeScreenFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_favouritesFragment"
+            app:destination="@id/favouritesFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@id/homeScreenFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_dailyAlarm"
+            app:destination="@id/dailyAlarm"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"
+            app:popUpTo="@id/homeScreenFragment" />
+        <action
+            android:id="@+id/action_homeScreenFragment_to_homePermissionsFragment"
+            app:destination="@id/homePermissionsFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
+    </fragment>
+    <fragment
+        android:id="@+id/weatherScreenFragment"
+        android:name="il.example.weatherapp.ui.WeatherScreen.WeatherScreenFragment"
+        android:label="weather_screen_fragment"
+        tools:layout="@layout/weather_screen_fragment" >
+        <action
+            android:id="@+id/action_weatherScreenFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"
+            app:popUpTo="@id/homeScreenFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_weatherScreenFragment_to_favouritesFragment"
+            app:destination="@id/favouritesFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@id/weatherScreenFragment" />
+        <action
+            android:id="@+id/action_weatherScreenFragment_to_historyFragment"
+            app:destination="@id/historyFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@id/weatherScreenFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/favouritesFragment"
+        android:name="il.example.weatherapp.ui.Favourites.FavouritesFragment"
+        android:label="favourites_fragment"
+        tools:layout="@layout/favourites_fragment" >
+        <action
+            android:id="@+id/action_favouritesFragment_to_weatherScreenFragment"
+            app:destination="@id/weatherScreenFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"
+            app:popUpTo="@id/weatherScreenFragment"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_favouritesFragment_to_historyFragment"
+            app:destination="@id/historyFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"
+            app:popUpTo="@id/favouritesFragment" />
+        <action
+            android:id="@+id/action_favouritesFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@id/my_nav" />
+    </fragment>
+    <fragment
+        android:id="@+id/historyFragment"
+        android:name="il.example.weatherapp.ui.History.HistoryFragment"
+        android:label="history_fragment"
+        tools:layout="@layout/history_fragment" >
+        <action
+            android:id="@+id/action_historyFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@id/my_nav" />
+        <action
+            android:id="@+id/action_historyFragment_to_favouritesFragment"
+            app:destination="@id/favouritesFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@id/historyFragment" />
+        <action
+            android:id="@+id/action_historyFragment_to_weatherScreenFragment"
+            app:destination="@id/weatherScreenFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@id/homeScreenFragment"
+            app:popUpToInclusive="false" />
+    </fragment>
+    <fragment
+        android:id="@+id/dailyAlarm"
+        android:name="il.example.weatherapp.ui.Alarm.DailyAlarm"
+        android:label="alarm_layout"
+        tools:layout="@layout/alarm_layout" >
+        <action
+            android:id="@+id/action_dailyAlarm_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"
+            app:popUpTo="@id/dailyAlarm" />
+        <action
+            android:id="@+id/action_dailyAlarm_to_favouritesFragment"
+            app:destination="@id/favouritesFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left"
+            app:popUpTo="@id/dailyAlarm" />
+        <action
+            android:id="@+id/action_dailyAlarm_to_historyFragment"
+            app:destination="@id/historyFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right"
+            app:popUpTo="@id/dailyAlarm" />
+    </fragment>
+    <fragment
+        android:id="@+id/introductFragment"
+        android:name="il.example.weatherapp.ui.Introduction.IntroductionFragment"
+        android:label="introduction_lay"
+        tools:layout="@layout/introduction_layout" >
+        <action
+            android:id="@+id/action_introductFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+        <action
+            android:id="@+id/action_introductFragment_to_homePermissionsFragment"
+            app:destination="@id/homePermissionsFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/homePermissionsFragment"
+        android:name="il.example.weatherapp.ui.HomePermissions.HomePermissionsFragment"
+        android:label="home_permissions_layout"
+        tools:layout="@layout/home_permissions_layout" >
+        <action
+            android:id="@+id/action_homePermissionsFragment_to_introductFragment"
+            app:destination="@id/introductFragment"
+            app:enterAnim="@anim/from_left"
+            app:exitAnim="@anim/to_right"
+            app:popEnterAnim="@anim/from_right"
+            app:popExitAnim="@anim/to_left" />
+        <action
+            android:id="@+id/action_homePermissionsFragment_to_homeScreenFragment"
+            app:destination="@id/homeScreenFragment"
+            app:enterAnim="@anim/from_right"
+            app:exitAnim="@anim/to_left"
+            app:popEnterAnim="@anim/from_left"
+            app:popExitAnim="@anim/to_right" />
+    </fragment>
+</navigation>
